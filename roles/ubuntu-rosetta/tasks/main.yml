@@ -1,3 +1,8 @@
+- name: Install packages
+  apt: name={{item}}
+  with_items:
+    - binfmt-support
+
 - name: Creates rosetta mountpoint
   file:
     path: /media/rosetta
@@ -18,47 +23,56 @@
     --mask "\xff\xff\xff\xff\xff\xfe\xfe\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff" \
     --credentials yes --preserve no --fix-binary yes
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy main restricted 
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-updates main restricted
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy universe
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-updates universe
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy multiverse
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-updates multiverse
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://security.ubuntu.com/ubuntu jammy-security main restricted
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://security.ubuntu.com/ubuntu jammy-security universe 
     state: present
     filename: ubuntu-amd64
 
-- apt_repository:
+- name: Add amd64 repo
+  apt_repository:
     repo: deb [arch=amd64] http://security.ubuntu.com/ubuntu jammy-security multiverse
     state: present
     filename: ubuntu-amd64

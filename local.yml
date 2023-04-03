@@ -5,7 +5,7 @@
       apt: update_cache=yes
       changed_when: False
       ignore_errors: true
-
+  roles:
+    - roles/ubuntu-rosetta
   tasks:
     - include: tasks/packages.yml
-    - include: tasks/rosetta_conf.yml
