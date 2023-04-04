@@ -1,0 +1,17 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.colorTheme": "Tokyo Night AltSynt",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "SF Mono",
+    "editor.wordWrap": "on",
+    "workbench.sideBar.location": "right",
+    "editor.fontFamily": "SF Mono",
+    "autoHide.autoHidePanel": false,
+    "editor.formatOnSave": true,
+    "workbench.colorCustomizations": {
+        "terminal.selectionBackground": "#ffee7f6e"
+    }
+}
