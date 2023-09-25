@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: update repositories
+      apt: update_cache=yes
+      changed_when: False
+      ignore_errors: true
+  roles:
+    - roles/ubuntu-rosetta
+  tasks:
+    - include: tasks/packages.yml
